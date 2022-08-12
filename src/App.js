@@ -12,9 +12,7 @@ function App() {
        <input placeholder="Type here to search"/>
        <button>Search</button>
        </form>
-        
-      </div>
-      <div className='list'>
+       <div className='list'>
         <ul>
           <li>
             Me
@@ -26,6 +24,11 @@ function App() {
             Mess
           </li>
         </ul>
+      </div>
+      </div>
+      
+      <div className='chart'>
+        <h1>This is a chart</h1>
       </div>
     </div>
   );
