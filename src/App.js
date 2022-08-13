@@ -1,10 +1,13 @@
 
-// import axios from "axios";
+
 import React, { useState, useEffect } from "react";
+// import Calendar from 'react-calendar';
+
 import './App.css';
 
 function App() {
   const [stock, setStock] = useState([]);
+  
    useEffect(() => {
       fetch('https://data.nasdaq.com/api/v3/datasets/OPEC/ORB.json')
          .then((response) => response.json())
@@ -27,9 +30,20 @@ function App() {
        <input placeholder="Type here to search"/>
        <button>Search</button>
        </form>
+       <div className="calendar-container">
+       {/* <div>
+        <Calendar
+          // onChange={this.onChange}
+          value={this.state.date}
+        />
+      </div> */}
+      
+   </div>
+   
+ 
        <div className='list'>
        {stock.map((stock) => (
-        <p >{stock.title}</p>
+        <p key={stock.id}>{stock.title}</p>
       ))}
         <ul>
           <li>
@@ -47,12 +61,16 @@ function App() {
       
       <div className='chart'>
       
-        <h1>This is a chart</h1>
+        <h1>{stock.id}</h1>
         <select>
-      <option value="actual value 1">Display Text 1</option>
-      <option value="actual value 2">Display Text 2</option>
-      <option value="actual value 3">Display Text 3</option>
+      <option value="actual value 1">Closing price</option>
+      <option value="actual value 2">Opening price</option>
+     
      </select>
+     
+      </div>
+      <div className='time'>
+        <button className='time-button'>june 5, 1998 - Dec 31, 2018</button>
       </div>
     </div>
   );

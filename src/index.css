@@ -5,4 +5,18 @@
 }
 .chart{
   align-items: center;
+  display: flex;
+  justify-items: flex-end;
+}
+.time{
+  position: absolute;
+  right: 2%;
+}
+.time-button{
+  color: white;
+  background:blue;
+  cursor:pointer;
+  padding:5px;
+  border-radius:5px;
+  
 }
