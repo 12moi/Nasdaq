@@ -50,12 +50,12 @@ class Stock extends React.Component {
   render() {
     return (
       <div>
-        <select className='time-date'>
+        <select className='time-price'>
       <option value="actual value 1">Closing price</option>
       <option value="actual value 2">Opening price</option>
+     
      </select>
-        <h1>Stock Market</h1>
-        
+     <h1>Stock Market</h1>
         <Plot
           data={[
             {
@@ -66,8 +66,7 @@ class Stock extends React.Component {
               marker: {color: 'red'},
             }
           ]}
-          
-          layout={{width: 720, height: 440, title: 'Nasdaq company stock'}}
+          layout={{width: 720, height: 440, title: 'Nasdaq company stock grapth'}}
         />
       </div>
     )

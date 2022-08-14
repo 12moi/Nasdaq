@@ -29,8 +29,9 @@ function App() {
         </div>
        <form>
        <input placeholder="Type here to search"/>
-       <button onClick={fetchData}>Search</button>
+       
        </form>
+       <button className="search-btn" onClick={fetchData}>Search</button>
        <div className="calendar-container">
       
    </div>
@@ -38,29 +39,18 @@ function App() {
        {company.length > 0 && (
         <ul>
           {company.map(company => (
-            <li key={company.id}>Name: {company.name}</li>
+            <li key={company.id}>{company.name}</li>
           ))}
         </ul>
       )}
-        <ul className="list">
-          
-          <li>
-            Company
-          </li>
-          <li>
-            Company 
-          </li>
-        </ul>
+        
       </div>
       </div>
       
       <div className='chart'>
-    
         <h1>{company.name}</h1>
-        
       </div>
       <Stock></Stock>
-     
       <div className='time'>
       <Calender />
       <br/>
