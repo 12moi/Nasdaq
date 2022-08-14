@@ -7,7 +7,7 @@ Moi Shadrack
 This is an application website which help people to see company list and there stock between 1998 to 2018 from nasdaq API. 
 
 ### Live link
-
+https://12moi.github.io/Nasdaq/
 #### Technology Used
 Reactjs <br>
 CSS

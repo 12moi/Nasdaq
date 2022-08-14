@@ -1,5 +1,5 @@
 {
-  "name": "nasdaq",
+  "homepage":"https://12moi.github.io/Nasdaq",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,7 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "homepage":"https://12moi.github.io/Nasdaq",
+    
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
