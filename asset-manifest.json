@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.871dd192.css",
-    "main.js": "/static/js/main.12a76447.js",
-    "index.html": "/index.html",
-    "main.871dd192.css.map": "/static/css/main.871dd192.css.map",
-    "main.12a76447.js.map": "/static/js/main.12a76447.js.map"
+    "main.css": "/Nasdaq/static/css/main.871dd192.css",
+    "main.js": "/Nasdaq/static/js/main.12a76447.js",
+    "index.html": "/Nasdaq/index.html",
+    "main.871dd192.css.map": "/Nasdaq/static/css/main.871dd192.css.map",
+    "main.12a76447.js.map": "/Nasdaq/static/js/main.12a76447.js.map"
   },
   "entrypoints": [
     "static/css/main.871dd192.css",
