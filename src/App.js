@@ -42,36 +42,33 @@ function App() {
           ))}
         </ul>
       )}
-        <ul>
+        <ul className="list">
+          
           <li>
-            Me
+            Company
           </li>
           <li>
-            Mey
-          </li>
-          <li>
-            Mess
+            Company 
           </li>
         </ul>
       </div>
       </div>
       
       <div className='chart'>
-      
+    
         <h1>{company.name}</h1>
         
-     
       </div>
       <Stock></Stock>
-      {/* <div className="graph">
-      <h1>Grapthical data</h1>
-     </div> */}
+     
       <div className='time'>
       <Calender />
+      <br/>
         <DateRange/>
-        
+        <br/>
+        <DateRangePicker/>
       </div>
-      <DateRangePicker/>
+     
     </div>
   );
 }

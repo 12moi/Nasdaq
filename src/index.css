@@ -20,6 +20,11 @@
   border-radius:5px;
   
 }
+.list li{
+  text-decoration: none;
+  color: brown;
+  
+}
 .graph{
   box-sizing: border-box;
   margin-top: 10%;
