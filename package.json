@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
+    "gh-pages": "^4.0.0",
     "install": "^0.13.0",
     "moment": "^2.29.4",
     "plotly.js": "^2.14.0",
@@ -24,6 +25,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "homepage":"https://12moi.github.io/Nasdaq",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
