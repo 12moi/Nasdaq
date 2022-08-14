@@ -1,24 +1,17 @@
 
 
-import React, { useState, useEffect } from "react";
-// import Calendar from 'react-calendar';
-
+// import React, { useState, useEffect } from "react";
+import Stock from './Stock';
+import Calender from './components/Calender.jsx'
+import DateRangePicker from './components/DateRangePicker'
+import DateRange from './components/DateRange'
 import './App.css';
 
 function App() {
-  const [stock, setStock] = useState([]);
+  // const [stock, setStock] = useState([]);
   
-   useEffect(() => {
-      fetch('https://data.nasdaq.com/api/v3/datasets/OPEC/ORB.json')
-         .then((response) => response.json())
-         .then((data) => {
-            console.log(data);
-            setStock(data);
-         })
-         .catch((err) => {
-            console.log(err.message);
-         });
-   }, []);
+  
+   
 
   return (
     <div className="App">
@@ -42,9 +35,9 @@ function App() {
    
  
        <div className='list'>
-       {stock.map((stock) => (
+       {/* {stock.map((stock) => (
         <p key={stock.id}>{stock.title}</p>
-      ))}
+      ))} */}
         <ul>
           <li>
             Me
@@ -61,17 +54,20 @@ function App() {
       
       <div className='chart'>
       
-        <h1>{stock.id}</h1>
-        <select>
-      <option value="actual value 1">Closing price</option>
-      <option value="actual value 2">Opening price</option>
-     
-     </select>
+        {/* <h1>{stock.id}</h1> */}
+        
      
       </div>
+      <Stock></Stock>
+      {/* <div className="graph">
+      <h1>Grapthical data</h1>
+     </div> */}
       <div className='time'>
-        <button className='time-button'>june 5, 1998 - Dec 31, 2018</button>
+      <Calender />
+        <DateRange/>
+        
       </div>
+      <DateRangePicker/>
     </div>
   );
 }
