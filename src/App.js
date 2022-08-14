@@ -1,6 +1,6 @@
 
 
-// import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Stock from './Stock';
 import Calender from './components/Calender.jsx'
 import DateRangePicker from './components/DateRangePicker'
@@ -8,9 +8,19 @@ import DateRange from './components/DateRange'
 import './App.css';
 
 function App() {
-  // const [stock, setStock] = useState([]);
+ 
+ 
+    const [company, setCompany] = useState([])
   
-  
+    const fetchData = () => {
+      fetch("https://data.nasdaq.com/api/v3/datasets/WIKI/AAPL.csv")
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          setCompany(data)
+        })
+    }
    
 
   return (
@@ -21,7 +31,7 @@ function App() {
         </div>
        <form>
        <input placeholder="Type here to search"/>
-       <button>Search</button>
+       <button onClick={fetchData}>Search</button>
        </form>
        <div className="calendar-container">
        {/* <div>
@@ -35,9 +45,13 @@ function App() {
    
  
        <div className='list'>
-       {/* {stock.map((stock) => (
-        <p key={stock.id}>{stock.title}</p>
-      ))} */}
+       {company.length > 0 && (
+        <ul>
+          {company.map(user => (
+            <li key={company.id}>{company.name}</li>
+          ))}
+        </ul>
+      )}
         <ul>
           <li>
             Me
