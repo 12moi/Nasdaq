@@ -53,7 +53,7 @@ const DateRangePickerComp = () => {
       <input
         value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(range[0].endDate, "MM/dd/yyyy")}`}
         readOnly
-        className="inputBox"
+        className="time-date"
         onClick={ () => setOpen(open => !open) }
       />
 

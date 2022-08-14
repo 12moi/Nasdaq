@@ -1,5 +1,4 @@
 
-
 import React, { useState} from "react";
 import Stock from './Stock';
 import Calender from './components/Calender.jsx'
@@ -9,11 +8,10 @@ import './App.css';
 
 function App() {
  
- 
     const [company, setCompany] = useState([])
   
     const fetchData = () => {
-      fetch("https://data.nasdaq.com/api/v3/datasets/WIKI/AAPL.csv")
+      fetch("https://data.nasdaq.com/api/v3/company/OPEC/ORB.csv?start_date=1998-01-01&end_date=2003-03-06")
         .then(response => {
           return response.json()
         })
@@ -34,21 +32,13 @@ function App() {
        <button onClick={fetchData}>Search</button>
        </form>
        <div className="calendar-container">
-       {/* <div>
-        <Calendar
-          // onChange={this.onChange}
-          value={this.state.date}
-        />
-      </div> */}
       
    </div>
-   
- 
        <div className='list'>
        {company.length > 0 && (
         <ul>
-          {company.map(user => (
-            <li key={company.id}>{company.name}</li>
+          {company.map(company => (
+            <li key={company.id}>Name: {company.name}</li>
           ))}
         </ul>
       )}
@@ -68,7 +58,7 @@ function App() {
       
       <div className='chart'>
       
-        {/* <h1>{stock.id}</h1> */}
+        <h1>{company.name}</h1>
         
      
       </div>

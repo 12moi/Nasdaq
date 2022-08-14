@@ -50,7 +50,7 @@ class Stock extends React.Component {
   render() {
     return (
       <div>
-        <select>
+        <select className='time-date'>
       <option value="actual value 1">Closing price</option>
       <option value="actual value 2">Opening price</option>
      </select>
@@ -67,7 +67,7 @@ class Stock extends React.Component {
             }
           ]}
           
-          layout={{width: 720, height: 440, title: 'A Fancy Plot'}}
+          layout={{width: 720, height: 440, title: 'Nasdaq company stock'}}
         />
       </div>
     )
